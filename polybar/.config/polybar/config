@@ -17,29 +17,23 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-;background = #222
+
 background = #aa
-;background-alt = #444
 background-alt = #222
-;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
-
 charging = #00db00
 charging-alt = #009000
 discharging = #ff0000
 discharging-alt = #8b0000
 
-[bar/MyBar]
+[bar/MainBar]
 monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 30
-;offset-x = 10%
-;offset-y = 10%
 radius = 2.0
 fixed-center = true
 
@@ -60,9 +54,9 @@ module-margin-right = 1
 
 font-0 = FuraCode Nerd Font:pixelsize=15;3
 
-modules-left = i3 
+modules-left = i3
 modules-center = xwindow
-modules-right = xbacklight memory cpu temperature battery wlan date 
+modules-right = xbacklight memory cpu temperature battery wlan date
 
 ;tray-position = right
 ;tray-padding = 1
@@ -153,11 +147,11 @@ label-focused-underline = #fba922
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon% %name% 
+label-unfocused = %icon% %name%
 label-unfocused-padding = ${self.label-focused-padding}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %icon% %name% 
+label-visible = %icon% %name%
 label-visible-padding = ${self.label-focused-padding}
 label-visible-underline = #ffddff
 
@@ -261,11 +255,11 @@ format-disconnect=
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 =
+ramp-signal-1 =
+ramp-signal-2 =
+ramp-signal-3 =
+ramp-signal-4 =
 ramp-signal-foreground = #9f78e1
 
 [module/eth]
@@ -288,7 +282,7 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = 
+date =
 date-alt = " %Y-%m-%d"
 
 time = %I:%M
@@ -371,7 +365,7 @@ format-full-prefix = " "
 format-full-prefix-foreground = #ffb52a
 format-full-underline = #ffb52a
 
-ramp-capacity-0 =  
+ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
@@ -437,7 +431,7 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
-[bar/subBar]
+[bar/SubBar]
 monitor = ${env:MONITOR:HDMI1}
 width = 100%
 height = 30
@@ -463,7 +457,7 @@ module-margin-right = 1
 
 font-0 = FuraCode Nerd Font:pixelsize=15;3
 
-modules-left = i3 
+modules-left = i3
 modules-center = xwindow
 modules-right = taskwarrior
 
@@ -489,8 +483,9 @@ interval = 30
 type = custom/script
 exec = /home/craig/.config/polybar/task_polybar.sh
 format = <label>
-format-foreground = #FFF
-format-prefix = " "
+format-foreground = #ddffdf
+format-prefix = " "
+format-underline = #ddffdf
 click-left = task "$((`cat /tmp/tw_polybar_id`))" done
 
 [settings]
