@@ -188,3 +188,6 @@ gaps inner 5
 gaps outer 10
 smart_borders on
 smart_borders no_gaps
+
+#screenlock
+bindsym $mod+x exec ~/.config/i3/screenlock.sh
