@@ -189,5 +189,29 @@ gaps outer 10
 smart_borders on
 smart_borders no_gaps
 
-#screenlock
-bindsym $mod+x exec ~/.config/i3/screenlock.sh
+# screenlock
+set $Locker ~/.config/i3/screenlock.sh
+bindsym $mod+x exec $Locker
+
+# scratchpad
+bindsym $mod+Shift+Backspace move scratchpad
+bindsym $mod+backslash scratchpad show
+bindsym $mod+BackSpace [class="kitty"] scratchpad show
+
+set $Locker ~/.config/i3/screenlock.sh
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Escape mode "$mode_system"
