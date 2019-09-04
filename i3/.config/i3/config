@@ -182,6 +182,7 @@ exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id $HOME/.config/compton/launch.sh
 exec_always --no-startup-id xrandr --output eDP1 --auto --right-of HDMI1
+exec_always --no-startup-id dunst
 
 for_window [class=".*"] border pixel 1
 gaps inner 5
@@ -194,10 +195,13 @@ set $Locker ~/.config/i3/screenlock.sh
 bindsym $mod+x exec $Locker
 
 # scratchpad
+for_window[instance="scratchpad"] move container to scratchpad
+exec --no-startup-id kitty --name=scratchpad
 bindsym $mod+Shift+Backspace move scratchpad
 bindsym $mod+backslash scratchpad show
 bindsym $mod+BackSpace [class="kitty"] scratchpad show
 
+# power menu
 set $Locker ~/.config/i3/screenlock.sh
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -207,7 +211,7 @@ mode "$mode_system" {
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -215,3 +219,17 @@ mode "$mode_system" {
 }
 
 bindsym $mod+Escape mode "$mode_system"
+
+## Manual management of external displays
+# Set the shortcuts and what they do
+set $mode_display Ext Screen (v) HDMI ON, (h) HDMI OFF
+mode "$mode_display" {
+    bindsym v exec --no-startup-id xrandr --output HDMI1 --auto --right-of eDP1, mode "default"
+    bindsym h exec --no-startup-id xrandr --output HDMI1 --auto --off, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+# Declare here the shortcut to bring the display selection menu
+bindsym $mod+z mode "$mode_display"

@@ -19,3 +19,6 @@ alias i3cfg='$EDITOR ~/.config/i3/config'
 
 # polybar specific
 alias polybarcfg='$EDITOR ~/.config/polybar/config'
+
+# general console
+alias ls="ls --color=auto"

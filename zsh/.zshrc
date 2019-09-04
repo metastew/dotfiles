@@ -48,5 +48,7 @@ POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 printf "Hello, ${USER}@${HOST}\n"
 printf "Today is, $(date)\n";
 printf "Sysinfo: $(uptime)\n"
-printf "\n$(fortune | cowsay | lolcat)${NC}\n"
-printf "\nDon't forget to do a yay -Syu"
+tput bold
+printf "PROTIP: Don't forget to do a yay -Syu\n"
+tput sgr0
+printf "\n$(minifortune | cowsay -s)${NC}\n"

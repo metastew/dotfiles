@@ -23,9 +23,9 @@ sox -t ul -c 1 -r 48k $bmpfile -t ul $glitchedfile trim 0 90s : echo 0.9 0.9 15 
 magick convert -rotate -90 $glitchedfile $glitchedfile
 
 # Add lock icon, pixelate and convert back to png
-magick convert -gravity center -font "Font-Awesome-5-Free-Solid" \
-    -pointsize 200 -draw "text -640,0 ''" -channel RGBA -fill '#bf616a' \
-    $glitchedfile $pngfile
+magick convert -gravity center -font "FuraCode Nerd Font" \
+     -pointsize 100 -draw "text -640,0 ''" -channel RGBA -fill '#f19191' \
+     $glitchedfile $pngfile
 
 # -u disables circle indicator when entering characters
 # -e doesn't try to authenticate when no character is entered
