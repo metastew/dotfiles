@@ -50,3 +50,7 @@ tput bold
 printf "PROTIP: Don't forget to do a yay -Syu\n"
 tput sgr0
 printf "\n$(minifortune | cowsay -s)${NC}\n"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true

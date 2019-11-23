@@ -21,4 +21,5 @@ if type "xrandr"; then
   done
 fi
 
+nitrogen --restore
 echo "bars launched..."

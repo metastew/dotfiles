@@ -182,7 +182,7 @@ exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id $HOME/.config/compton/launch.sh
 exec_always --no-startup-id dunst
-exec_always --no-startup-id redshift &
+exec_always --no-startup-id redshift-gtk &
 
 for_window [class=".*"] border pixel 1
 gaps inner 5
@@ -198,8 +198,7 @@ bindsym $mod+x exec $Locker
 for_window[instance="scratchpad"] move container to scratchpad
 exec --no-startup-id kitty --name=scratchpad
 bindsym $mod+Shift+Backspace move scratchpad
-bindsym $mod+backslash scratchpad show
-bindsym $mod+BackSpace [class="kitty"] scratchpad show
+bindsym $mod+backslash [class="kitty"] scratchpad show, resize set 1430 875, move position center
 
 # power menu
 set $Locker ~/.config/i3/screenlock.sh

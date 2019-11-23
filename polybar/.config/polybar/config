@@ -56,11 +56,11 @@ font-0 = FuraCode Nerd Font:pixelsize=15;3
 
 modules-left = i3
 modules-center = xwindow
-modules-right = xbacklight memory cpu wlan temperature battery date
+modules-right = xbacklight memory cpu temperature battery date
 
-;tray-position = right
-;tray-padding = 1
-;tray-background = #0063ff
+tray-position = right
+tray-background = ${colors.background}
+tray-detached = false
 
 ;wm-restack = bspwm
 wm-restack = i3
