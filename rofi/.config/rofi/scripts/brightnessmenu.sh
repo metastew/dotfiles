@@ -15,11 +15,11 @@ case $selected in
     $option0)
 		sudo bash -c "echo 50 > /sys/class/backlight/intel_backlight/brightness";;
     $option1)
-        sudo bash -c "echo 142 > /sys/class/backlight/intel_backlight/brightness";;
+        sudo bash -c "echo 1000 > /sys/class/backlight/intel_backlight/brightness";;
     $option2)
-        sudo bash -c "echo 234 > /sys/class/backlight/intel_backlight/brightness";;
+        sudo bash -c "echo 2000 > /sys/class/backlight/intel_backlight/brightness";;
 	$option3)
-        sudo bash -c "echo 325 > /sys/class/backlight/intel_backlight/brightness";;
+        sudo bash -c "echo 3000 > /sys/class/backlight/intel_backlight/brightness";;
 	$option4)
-        sudo bash -c "echo 416 > /sys/class/backlight/intel_backlight/brightness";;
+        sudo bash -c "echo 4794 > /sys/class/backlight/intel_backlight/brightness";;
 esac

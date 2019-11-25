@@ -55,8 +55,8 @@ module-margin-right = 1
 font-0 = FuraCode Nerd Font:pixelsize=15;3
 
 modules-left = i3 xwindow
-;modules-center = 
-modules-right = xbacklight memory cpu temperature battery date
+;modules-center =
+modules-right = memory cpu temperature battery date
 
 tray-position = right
 tray-background = ${colors.background}
@@ -461,7 +461,7 @@ module-margin-right = 1
 font-0 = FuraCode Nerd Font:pixelsize=15;3
 
 modules-left = i3 xwindow
-;modules-center = 
+;modules-center =
 modules-right = packageupdates taskwarrior date
 
 ;tray-position = right
