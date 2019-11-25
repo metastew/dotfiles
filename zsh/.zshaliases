@@ -4,21 +4,21 @@ alias awthemecfg='$EDITOR ~/.config/awesome/mytheme.lua'
 alias awautostartcfg='$EDITOR ~/.config/awesome/autostart.sh'
 
 # compton specific
-alias compcfg='$EDITOR ~/.config/compton/compton.conf'
+alias compcfg='$EDITOR ~/dotfiles/compton/.config/compton/compton.conf'
 
 # zsh specific
-alias szshrc='source ~/.zshrc'
-alias zshcfg='$EDITOR ~/.zshrc'
-alias zshalias='$EDITOR ~/.zshaliases'
+alias szshrc='source ~/dotfiles/zsh/.zshrc'
+alias zshcfg='$EDITOR ~/dotfiles/zsh/.zshrc'
+alias zshalias='$EDITOR ~/dotfiles/zsh/.zshaliases'
 
 # troubleshooting network
 alias ping3='ping -c3 archlinux.org'
 
 # i3 specific
-alias i3cfg='$EDITOR ~/.config/i3/config'
+alias i3cfg='$EDITOR ~/dotfiles/i3/.config/i3/config'
 
 # polybar specific
-alias polybarcfg='$EDITOR ~/.config/polybar/config'
+alias polybarcfg='$EDITOR ~/dotfiles/polybar/.config/polybar/config'
 
 # general console
 alias ls="ls --color=auto"
