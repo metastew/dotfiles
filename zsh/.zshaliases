@@ -22,3 +22,6 @@ alias polybarcfg='$EDITOR ~/dotfiles/polybar/.config/polybar/config'
 
 # general console
 alias ls="ls --color=auto"
+
+# open dotfiles in VS Code
+alias dotfiles="code $HOME/dotfiles"
