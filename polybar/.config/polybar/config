@@ -54,8 +54,8 @@ module-margin-right = 1
 
 font-0 = FuraCode Nerd Font:pixelsize=15;3
 
-modules-left = i3
-modules-center = xwindow
+modules-left = i3 xwindow
+;modules-center = 
 modules-right = xbacklight memory cpu temperature battery date
 
 tray-position = right
@@ -144,12 +144,14 @@ label-mode-foreground = #ffdd00
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%%name%
-label-focused-underline = #ee5f00
+;label-focused-overline = #f8ff24
 label-focused-padding = 1
+label-focused-foreground = #ffcb0f
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%%name%
 label-unfocused-padding = ${self.label-focused-padding}
+label-unfocused-foreground = #666
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%%name%
@@ -162,6 +164,7 @@ label-urgent-padding = ${self.label-focused-padding}
 
 ; Separator in between workspaces
 label-separator = 
+label-separator-foreground = #666
 
 [module/mpd]
 type = internal/mpd
@@ -282,7 +285,7 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
+date = " %D"
 date-alt = " %Y-%m-%d"
 
 time = %I:%M
@@ -457,8 +460,8 @@ module-margin-right = 1
 
 font-0 = FuraCode Nerd Font:pixelsize=15;3
 
-modules-left = i3
-modules-center = xwindow
+modules-left = i3 xwindow
+;modules-center = 
 modules-right = packageupdates taskwarrior date
 
 ;tray-position = right
