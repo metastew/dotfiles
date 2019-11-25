@@ -16,7 +16,7 @@ options="$option0\n$option1\n$option2\n$option3\n$option4\n$option5\n$option6\n$
 chosen="$(echo -e "$options" | rofi -dmenu -p "power")"
 case $chosen in
     $option0)
-        i3lock-fancy;;
+        bash $HOME/.config/i3/screenlock.sh ;;
     $option1)
         i3-msg exit;;
     $option2)
