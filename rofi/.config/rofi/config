@@ -42,7 +42,7 @@ combi-modi: "window,run";
 /*	line-padding: 1;*/
 /*	filter: ;*/
 /*	separator-style: "dash";*/
-/*	hide-scrollbar: false;*/
+hide-scrollbar: true;
 fullscreen: true;
 /*	fake-transparency: false;*/
 /*	dpi: -1;*/

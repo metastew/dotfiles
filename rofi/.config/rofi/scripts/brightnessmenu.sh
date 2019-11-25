@@ -13,7 +13,7 @@ options="$option0\n$option1\n$option2\n$option3\n$option4"
 selected="$(echo -e "$options" | rofi -lines 5 -dmenu -p "brightness")"
 case $selected in
     $option0)
-		sudo bash -c "echo 50 > /sys/class/backlight/intel_backlight/brightness";;
+	sudo bash -c "echo 50 > /sys/class/backlight/intel_backlight/brightness";;
     $option1)
         sudo bash -c "echo 1000 > /sys/class/backlight/intel_backlight/brightness";;
     $option2)

@@ -364,24 +364,24 @@ format-charging-underline = ${colors.charging-alt}
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${colors.discharging-alt}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = #ffb52a
 format-full-underline = #ffb52a
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
 animation-charging-foreground = ${colors.charging}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 = 
+;animation-discharging-1 = 
+;animation-discharging-2 =
 animation-discharging-foreground = ${colors.discharging}
 animation-discharging-framerate = 750
 
