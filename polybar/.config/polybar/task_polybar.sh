@@ -7,7 +7,7 @@ echo "$most_urgent_id" > /tmp/tw_polybar_id
 
 if [[ ! -z "$most_urgent_due" ]]
 then
-  echo "$most_urgent_desc  $most_urgent_due"
+  echo "$most_urgent_desc [due:$most_urgent_due]"
 else
   echo "$most_urgent_desc"
 fi
