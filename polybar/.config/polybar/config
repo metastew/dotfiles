@@ -46,6 +46,7 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 font-0 = FuraCode Nerd Font:pixelsize=15;3
+font-1 = Hack Nerd Font Mono:style=Bold:pixelsize=15;3
 
 modules-left = i3 xwindow
 modules-right = memory cpu temperature battery date
@@ -65,6 +66,7 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = [%title:0:45:...%]
+label-font = 2 
 format-padding = 1
 format-prefix = " "
 format-prefix-foreground = ${colors.primary}
@@ -235,6 +237,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = FuraCode Nerd Font:pixelsize=15;3
+font-1 = Hack Nerd Font Mono:style=Bold:pixelsize=15;3
 
 modules-left = i3 xwindow
 modules-right = packageupdates taskwarrior date
@@ -248,7 +251,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [module/taskwarrior]
-interval = 30
+interval = 60
 type = custom/script
 exec = /home/craig/.config/polybar/task_polybar.sh
 format = <label>
@@ -259,7 +262,7 @@ format-underline = ${colors.secondary}
 click-left = task "$((`cat /tmp/tw_polybar_id`))" done
 
 [module/packageupdates]
-interval = 600
+interval = 60
 type = custom/script
 exec = ~/.config/polybar/package_update.sh
 format-foreground = ${colors.foreground}
@@ -286,6 +289,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = FuraCode Nerd Font:pixelsize=15;3
+font-1 = Hack Nerd Font Mono:style=Bold:pixelsize=15;3
 
 modules-left = i3 xwindow
 modules-right = date

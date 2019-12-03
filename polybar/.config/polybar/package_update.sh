@@ -10,7 +10,9 @@ fi
 
 updates=$(( "$updates_arch" + "$updates_aur" ))
 
-if [ "$updates" -gt 0 ]; then
+if [ "$updates" -eq 1 ]; then
+  echo "$updates update available"
+elif [ "$updates" -gt 1 ]; then
   echo "$updates updates available"
 else
   echo ""
