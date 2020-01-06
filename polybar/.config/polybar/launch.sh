@@ -14,6 +14,10 @@ if type "xrandr"; then
     then
       echo "eDP1 and HDMI1"
       MONITOR=$m polybar --reload SubBar1 &
+    elif [ $m == 'DP2-3' ]
+    then
+      echo "eDP1 and DP2-3"
+      MONITOR=$m polybar --reload SubBar1 &
     else
       echo "else"
       polybar --reload MainBar &

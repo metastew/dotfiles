@@ -42,11 +42,24 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_SHORTEN_DELIMITER=".."
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
+# variables for system message
+toptaskdesc=`task rc.verbose: rc.report.next.columns:description rc.report.next.labels:1 limit:1 next`
+toptaskdue=`task rc.verbose: rc.report.next.columns:due.relative rc.report.next.labels:1 limit:1 next`
+
 # message
-printf "Hello, ${USER}@${HOST}\n"
-printf "Today is, $(date)\n";
-printf "Sysinfo: $(uptime)\n"
 tput bold
+printf "Hello, ${USER}@${HOST}\n"
+tput sgr0
+printf "$(date)\n";
+printf "Sysinfo:$(uptime)\n"
+tput setaf 2
+if [[ ! -z "$toptaskdue" ]]
+then
+  printf "TODO: ${toptaskdesc} [due: ${toptaskdue}]\n"
+else
+  printf "TODO: ${toptaskdesc}\n"
+fi
+tput setaf 3
 printf "PROTIP: Don't forget to do a yay -Syu\n"
 tput sgr0
 printf "\n$(minifortune | cowsay -s)${NC}\n"
